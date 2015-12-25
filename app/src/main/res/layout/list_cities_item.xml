@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/lv_cities_container"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="8dp">
+
+    <TextView
+        android:id="@+id/lv_cities_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:textSize="24sp"
+        android:textColor="@color/primary_text"/>
+
+    <TextView
+        android:id="@+id/lv_cities_country"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lv_cities_city"
+        android:textSize="12sp"
+        android:textColor="@color/accent"/>
+
+    <TextView
+        android:id="@+id/lv_cities_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:layout_toLeftOf="@+id/lv_cities_icon"
+        android:textColor="@color/primary_text"
+        android:textSize="32sp"/>
+
+    <ImageView
+        android:id="@+id/lv_cities_icon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:padding="8dp"
+        android:scaleType="centerCrop"/>
+
+</RelativeLayout>

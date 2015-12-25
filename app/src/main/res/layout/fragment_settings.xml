@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/divider"
+        android:layout_marginTop="24dp"
+        android:paddingBottom="1dp">
+
+        <RelativeLayout
+            android:background="@color/icons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="24dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="16dp">
+
+            <TextView
+                android:id="@+id/settings_units_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left|top"
+                android:text="UNITS"
+                android:textColor="@color/accent"/>
+
+            <RadioGroup
+                android:id="@+id/rg_settings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/settings_units_text"
+                android:layout_marginTop="8dp"
+                android:paddingRight="8dp">
+
+                <RadioButton
+                    android:id="@+id/rb_settings_celcius"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Celcius"
+                    android:textSize="20dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb_settings_fahrenheit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fahrenheit"
+                    android:textSize="20dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb_settings_kelvin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kelvin"
+                    android:textSize="20dp"/>
+
+            </RadioGroup>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/city_refresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/background"
+            android:dividerHeight="1dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F57C00"
+                android:layout_marginTop="24dp"
+                android:paddingBottom="1dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/accent"
+                    android:paddingBottom="24dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="16dp">
+
+                    <TextView
+                        android:id="@+id/city_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:textColor="@color/icons"
+                        android:textSize="36sp"/>
+
+                    <TextView
+                        android:id="@+id/city_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/city_name"
+                        android:textColor="@color/icons"
+                        android:textSize="16sp"/>
+
+                    <ImageView
+                        android:id="@+id/city_icon"
+                        android:layout_width="128dp"
+                        android:layout_height="128dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/city_description"
+                        android:padding="8dp"
+                        android:scaleType="centerCrop"/>
+
+                    <TextView
+                        android:id="@+id/city_temp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/city_description"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:textColor="@color/icons"
+                        android:textSize="96sp"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#EEEEEE"
+                android:divider="@color/divider"
+                android:layout_marginBottom="24dp"
+                android:orientation="vertical"
+                android:paddingLeft="32dp"
+                android:showDividers="middle">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="16dp">
+
+                    <TextView
+                        android:id="@+id/city_temperature_range_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|top"
+                        android:text="TEMPERATURE"
+                        android:textColor="@color/accent"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:src="@drawable/ic_thermometer"/>
+
+                    <TextView
+                        android:id="@+id/city_temperature_range"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/city_temperature_range_text"
+                        android:layout_marginTop="8dp"
+                        android:paddingRight="8dp"
+                        android:textColor="@color/primary_text"
+                        android:textSize="32sp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="16dp">
+
+                    <TextView
+                        android:id="@+id/city_humidity_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|top"
+                        android:text="HUMIDITY"
+                        android:textColor="@color/accent"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:src="@drawable/ic_water"/>
+
+                    <TextView
+                        android:id="@+id/city_humidity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/city_humidity_text"
+                        android:layout_marginTop="8dp"
+                        android:paddingRight="8dp"
+                        android:textColor="@color/primary_text"
+                        android:textSize="32sp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="16dp">
+
+                    <TextView
+                        android:id="@+id/city_wind_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|top"
+                        android:text="WIND"
+                        android:textColor="@color/accent"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:src="@drawable/ic_weather_windy"/>
+
+                    <TextView
+                        android:id="@+id/city_wind"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/city_wind_text"
+                        android:layout_marginTop="8dp"
+                        android:paddingRight="8dp"
+                        android:textColor="@color/primary_text"
+                        android:textSize="32sp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="16dp">
+
+                    <TextView
+                        android:id="@+id/city_pressure_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|top"
+                        android:text="PRESSURE"
+                        android:textColor="@color/accent"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:src="@drawable/ic_gauge"/>
+
+                    <TextView
+                        android:id="@+id/city_pressure"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/city_pressure_text"
+                        android:layout_marginTop="8dp"
+                        android:paddingRight="8dp"
+                        android:textColor="@color/primary_text"
+                        android:textSize="32sp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="16dp">
+
+                    <TextView
+                        android:id="@+id/city_cloud_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|top"
+                        android:text="CLOUD"
+                        android:textColor="@color/accent"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:src="@drawable/ic_weather_cloudy"/>
+
+                    <TextView
+                        android:id="@+id/city_cloud"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/city_cloud_text"
+                        android:layout_marginTop="8dp"
+                        android:paddingRight="8dp"
+                        android:textColor="@color/primary_text"
+                        android:textSize="32sp"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</android.support.v4.widget.SwipeRefreshLayout>
